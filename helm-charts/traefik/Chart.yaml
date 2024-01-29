@@ -1,0 +1,36 @@
+apiVersion: v2
+name: traefik
+description: A Traefik based Kubernetes ingress controller
+type: application
+version: 26.0.0
+# renovate: image=traefik
+appVersion: v2.10.7
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - traefik
+  - ingress
+  - networking
+home: https://traefik.io/
+sources:
+  - https://github.com/traefik/traefik
+  - https://github.com/traefik/traefik-helm-chart
+maintainers:
+  - name: mloiseleur
+    email: michel.loiseleur@traefik.io
+  - name: charlie-haley
+    email: charlie.haley@traefik.io
+  - name: darkweaver87
+    email: remi.buisson@traefik.io
+icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+annotations:
+  artifacthub.io/changes: |
+    - "fix: 🐛 improve confusing suggested value on openTelemetry.grpc"
+    - "fix: 🐛 declare http3 udp port, with or without hostport"
+    - "feat: 💥 deployment.podannotations support interpolation with tpl"
+    - "feat: allow update of namespace policy for websecure listener"
+    - "feat: allow defining startupProbe"
+    - "feat: add file provider"
+    - "feat: :boom: unify plugin import between traefik and this chart"
+    - "chore(release): 🚀 publish v26"
+    - "chore(deps): update traefik docker tag to v2.10.6"
+    - "Release namespace for Prometheus Operator resources"
